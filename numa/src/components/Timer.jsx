@@ -76,11 +76,7 @@ useGSAP(() => {
                 <button className={style.buttonBox__btn} onClick={()=>dispatch(pausa())}>𑫨</button>
                 <button className={style.buttonBox__btn} onClick={()=>dispatch(reset())}>Reset</button>
             </div>
-            <img src={imageMeditazione} alt="immagine mascotte che medita" />
-            <h2>Lascia andare, un respiro alla volta</h2>
-            <p className={style.text}>Non devi raggiungere un risultato né liberare completamente la mente. 
-                Lascia che i pensieri arrivino e vadano, senza trattenerli. 
-                Riporta gentilmente l’attenzione al respiro e concediti questo momento, senza fretta.</p>
+            
         </div>
 
     )
