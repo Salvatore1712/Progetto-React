@@ -6,13 +6,15 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    padding: 24px 16px;
+    padding: 24px 16px 0 16px;
     background-color: $color-primary-soft;
+    height: 100%;
 }
 
 .item {
     flex-grow: 1;
-    height: 500px;
+    height: fit-content;
+    margin-top: 1.5rem;
     flex-basis: 300px;
 }
 
@@ -35,4 +37,21 @@
 
 .imageHero {
     margin: 2rem auto;
+}
+
+.textHero {
+    font-family: $font-text;
+    color: $color-text;
+    font-size: $font-size-standard;
+    padding: 1.3rem 28px;
+    margin: 0 auto;
+}
+
+h3 {
+    text-align: left;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+    font-family: $font-title;
+    font-size: 23px;
 }

@@ -1,0 +1,16 @@
+@use "../style/abstract/variables" as *;
+
+.footer {
+    margin: 2.5rem auto 0 auto;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+    width: 100%;
+    padding: 16px 12px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-primary;
+    font-family: $font-text;
+    color: $color-bg;
+}
