@@ -1,0 +1,125 @@
+// -----------------------------------------------------------------------------
+// Reset / Normalize di base
+// Ispirato a Andy Bell "Modern CSS Reset" e Josh Comeau
+// -----------------------------------------------------------------------------
+
+// 1. Box-sizing coerente su tutti gli elementi
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+// 2. Rimuove i margini di default
+* {
+    margin: 0;
+}
+
+// 3. Rimuove il padding delle liste con ruolo esplicito
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+    padding: 0;
+}
+
+// 4. Impostazioni di base su html/body
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+// 5. Titoli ed elementi interattivi con line-height ridotto
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+// 6. Evita testi troppo lunghi nei titoli
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+// 7. Media elements a blocco e responsive
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+// 8. Form elements ereditano la tipografia
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+// 9. Textarea senza resize orizzontale
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+// 10. Link puliti
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+// 11. Ancora lo scroll-margin agli elementi con id (link interni)
+:target {
+    scroll-margin-block: 5ex;
+}
+
+// 12. Rispetta chi preferisce meno animazioni
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+// 13. Root per React
+#root {
+    isolation: isolate;
+    min-height: 100vh;
+}

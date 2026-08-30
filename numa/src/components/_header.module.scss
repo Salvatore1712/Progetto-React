@@ -1,0 +1,119 @@
+//import delle variabili
+@use "../style/abstract/variables" as *;
+
+
+
+//Stile Header
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    cursor: pointer;
+    top: 0;
+    background-color: $color-primary-soft;
+    box-shadow: $shadow-medium;
+
+    &__image {
+        width: 40%;
+        padding: $space-12;
+    }
+
+    //hamburger icona
+    &__menuIcon {
+        position: absolute;
+        top: 30px;
+        right: 24px;
+        background-color: $color-text;
+        width: 28px;
+        height: 5px;
+        border-radius: $radius-small;
+        transition: transform 0.3s ease, top 0.3s ease;
+        cursor: pointer;
+        z-index: 100;
+
+        &::after,
+        &::before {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: $color-text;
+            content: "";
+            cursor: pointer;
+            border-radius: $radius-small;
+            transition: transform 0.3s ease, top 0.3s ease;
+        }
+
+        &::after {
+            top: -8px;
+        }
+
+        &::before {
+            top: 8px;
+        }
+
+        // Stato aperto: diventa X
+        &--open {
+            background-color: transparent; // sparisce la barra centrale
+
+            &::after {
+                top: 0;
+                transform: rotate(45deg);
+            }
+
+            &::before {
+                top: 0;
+                transform: rotate(-45deg);
+            }
+        }
+    }
+
+
+}
+
+
+
+//Menu navigazione header
+.header__menu {
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100dvh;
+    position: absolute;
+    align-items: center;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    background: #73558D;
+    background: linear-gradient(180deg, rgba(115, 85, 141, 1) 0%, rgba(255, 255, 255, 1) 98%);
+    font-family: $font-text;
+    font-size: $font-size-h3;
+
+    ul {
+        width: 100%;
+        align-items: center;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: $space-12;
+    }
+
+    li {
+        width: 100%;
+        text-decoration: none;
+        list-style-type: none;
+        text-align: center;
+        color: $color-bg;
+        font-weight: 500;
+        font-size: $font-size-h2;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+        padding: $space-12;
+    }
+}

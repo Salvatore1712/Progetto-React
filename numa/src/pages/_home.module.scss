@@ -1,0 +1,38 @@
+// **** stile pagina home
+
+//import variabili
+@use "../style/abstract/variables" as *;
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24px 16px;
+    background-color: $color-primary-soft;
+}
+
+.item {
+    flex-grow: 1;
+    height: 500px;
+    flex-basis: 300px;
+}
+
+.title {
+    font-size: $font-size-title;
+    font-family: $font-title;
+    color: $color-text;
+    margin-top: -5px;
+}
+
+.titleSmall {
+    font-size: $font-size-h2;
+    font-family: $font-title;
+    color: $color-text;
+}
+
+.titleWrap {
+    //container per i titoli
+}
+
+.imageHero {
+    margin: 2rem auto;
+}
