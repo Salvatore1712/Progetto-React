@@ -1,6 +1,6 @@
 //import modulo di stile
 import style from "../pages/_home.module.scss";
-import imageHero from "../assets/image-hero-mobile.png"
+import imageHero from "../assets/image-hero-mobile_2.png"
 import ButtonCTA from "../components/ButtonCTA";
 import ButtonOutline from "../components/ButtonOutline";
 import Footer from "../components/Footer";

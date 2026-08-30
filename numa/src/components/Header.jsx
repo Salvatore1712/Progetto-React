@@ -29,9 +29,9 @@ export default function Header () {
             <span className={`${style.header__menuIcon} ${isOpen ? style["header__menuIcon--open"] : ""}`} onClick={() => setIsOpen(prev => !prev)} />
             <nav className={style.header__menu} ref={menuRef}>
                 <ul>
-                    <li><Link to="/">➜ Home</Link></li>
-                    <li><Link to="/meditazione">➜ Meditazione</Link></li>
-                    <li><Link to="/respiro">➜ Respiro</Link></li>
+                    <li><Link to="/">❤︎ Home ❤︎</Link></li>
+                    <li><Link to="/meditazione">⭐︎ Meditazione ⭐︎</Link></li>
+                    <li><Link to="/respiro">◎ Respiro ◎</Link></li>
                 </ul>
             </nav>
         </header>
