@@ -4,6 +4,9 @@ import imageHero from "../assets/image-hero-mobile.png"
 import ButtonCTA from "../components/ButtonCTA";
 import ButtonOutline from "../components/ButtonOutline";
 import Footer from "../components/Footer";
+import iconaRespito from "../assets/icona-respiro.png"
+import iconaMedita from "../assets/icona-medita.png"
+import CardsLink from "../components/CardsLink";
 
 export default function Home () {
     return(
@@ -21,14 +24,16 @@ export default function Home () {
                     <ButtonCTA testo={"Inizia la meditazione ➜"} path={"/meditazione"}></ButtonCTA>
                     <ButtonOutline testo={"Respira con Numa ➜"} path={"/respiro"}></ButtonOutline>
                 </div>
-                <div className={style.item}></div>
                 <div className={style.item}>
                     <h3>Un momento per te, ogni giorno</h3>
                     <p className={style.textHero}>Non serve molto per ritrovare il tuo equilibrio.
                         Scegli tra meditazione, respirazione e percorsi guidati, e lascia che Numa ti accompagni in una pausa dedicata al tuo benessere.</p>
-                        <Footer></Footer>
                 </div>
-                
+                <div className={style.cradWarapper}>
+                    <CardsLink urlSrc={iconaRespito} title={"Respira"} testo={"Trova qualche minuto di silenzio e concentrazione"} path={"/respiro"}></CardsLink>
+                    <CardsLink urlSrc={iconaMedita} title={"Medita"} testo={"Segui il ritmo del tuo respiro e ritrova la calma"} path={"/meditazione"}></CardsLink>
+                </div>
+                <Footer></Footer>
             </div>
             
         </>

@@ -1,0 +1,46 @@
+@use "../style/abstract/variables" as *;
+
+.card {
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    background-color: $color-primary-soft;
+    width: 85%;
+    border: 1px solid $color-primary;
+    border-radius: $radius-small;
+    padding: 16px;
+    gap: 8px;
+    box-shadow: $shadow-medium;
+
+    &__image {
+        width: 15%;
+    }
+
+    &__title {
+        padding: 0;
+        color: $color-text;
+        font-size: 38pz;
+    }
+
+    &__text {
+        font-family: $font-text;
+        color: $color-text;
+        font-size: $font-size-standard;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    a {
+        width: 95%;
+        height: fit-content;
+        border-radius: $radius-small;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-primary;
+        font-size: 20px;
+        color: $color-bg;
+        font-family: $font-text;
+    }
+}
