@@ -1,8 +1,10 @@
 //import foglio di stile
 import TimerRespiro from "../components/TimerRespiro"
-import styleResp from "./_respiro.module.scss"
+import styleResp from "./respiro.module.scss"
 import imageRespiro from "../assets/image-respiro.png"
 import Footer from "../components/Footer"
+import RicetteAPI from "../components/RicetteAPI"
+
 
 
 export default function Respiro() {
@@ -15,7 +17,6 @@ export default function Respiro() {
             <TimerRespiro></TimerRespiro>
             <section className={styleResp.info}>
                 <img src={imageRespiro} alt="mascotte che respira felice" />
-                <h3>Lasciati inpirare dalla frasew del giorno</h3>
             </section>
             <Footer></Footer>
         </div>

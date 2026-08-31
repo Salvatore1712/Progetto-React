@@ -1,5 +1,5 @@
 import { Link } from "react-router"
-import style from "./_cardsLink.module.scss"
+import style from "./cardsLink.module.scss"
 export default function CardsLink({title, testo, path}) {
     return (
         <div className={style.card}>

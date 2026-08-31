@@ -1,4 +1,4 @@
-import style from "./_header.module.scss"
+import style from "./header.module.scss"
 import { Link, useLocation } from "react-router"
 import gsap from "gsap"
 
@@ -32,6 +32,7 @@ export default function Header () {
                     <li><Link to="/">❤︎ Home ❤︎</Link></li>
                     <li><Link to="/meditazione">⭐︎ Meditazione ⭐︎</Link></li>
                     <li><Link to="/respiro">◎ Respiro ◎</Link></li>
+                    <li><Link to="/ricette">♨︎ Ricette ♨︎</Link></li>
                 </ul>
             </nav>
         </header>

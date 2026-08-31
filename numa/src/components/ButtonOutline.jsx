@@ -1,5 +1,5 @@
 import { Link } from "react-router"
-import style from "./_buttonCta.module.scss"
+import style from "./buttonCta.module.scss"
 
 
 export default function ButtonOutline({testo, path}){

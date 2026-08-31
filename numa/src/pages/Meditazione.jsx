@@ -1,7 +1,7 @@
 import ButtonCTA from "../components/ButtonCTA";
 import Footer from "../components/Footer";
 import Timer from "../components/Timer";
-import style from "./_meditazione.module.scss";
+import style from "./meditazione.module.scss";
 import imageMeditazione from "../assets/image-meditazione.png"
 
 

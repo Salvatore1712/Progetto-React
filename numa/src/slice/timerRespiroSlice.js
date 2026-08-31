@@ -17,6 +17,7 @@ const timerRespiroSlice = createSlice({
         },
         reset: (state)=> {
             state.isRunning = false
+            state.seconds = 0
         },
     }
 })

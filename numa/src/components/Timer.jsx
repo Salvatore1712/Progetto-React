@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import style from "./_timer.module.scss";
+import style from "./timer.module.scss";
 import { aggiungi_secondi, pausa, start, reset, tick } from "../slice/timerSlice";
 import { useEffect, useRef } from "react";
 import {useGSAP} from "@gsap/react"

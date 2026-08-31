@@ -1,4 +1,4 @@
-import style from "./_footer.module.scss"
+import style from "./footer.module.scss"
 import logoSalvatore from "../assets/logo-SDR-black.png"
 import { Link } from "react-router"
 
