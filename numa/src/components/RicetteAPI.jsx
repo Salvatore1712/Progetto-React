@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react"
 import richiestaRicetteAPI from "../api/ricette"
+import style from "./ricetteApi.module.scss"
+import { Link } from "react-router"
 
 export default function RicetteAPI() {
     const [ricetta, setRicetta] = useState(null)
@@ -13,12 +15,14 @@ export default function RicetteAPI() {
         }
         fetchRicetta()
     },[])
+
+    //componente
     return(
-        <>
-        <p>{ricetta ? ricetta.nomeRicetta : (<p>Caricamento ricetta</p>)}</p>
-        <p>{ricetta ? ricetta.linkRicetta : (<p>Nessun link disponibile</p>)}</p>
-        <p>{ricetta ? ricetta.istruzRicetta : (<p>"-"</p>)}</p>
-        </>
-        
+        <div className={style.containerRicetta}>
+            <p className={style.titleRicetta}>{ricetta ? ricetta.nomeRicetta : "Caricamento ricetta"}</p>
+            <img src={ricetta ?ricetta.imgUrl : "immagine non disponibile" } className={style.imageRicetta}></img>
+            <Link to={ricetta ? ricetta.linkRicetta : "Nessun link disponibile"} className={style.btnVideo}>Guarda il video ▶</Link>
+            <p className={style.textRIcetta}>{ricetta ? ricetta.istruzRicetta : "-"}</p>
+        </div>
     )
 }

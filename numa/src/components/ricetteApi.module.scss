@@ -1,0 +1,45 @@
+@use "../style/abstract/variables" as *;
+
+.containerRicetta {
+    padding: 24px 16px 0 16px;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleRicetta {
+    font-family: $font-text;
+    color: $color-primary;
+    font-weight: 600;
+    font-size: 32px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+
+.btnVideo {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1F4D32;
+    height: fit-content;
+    border-radius: $radius-small;
+    padding: 8px 16px;
+    margin-top: 1rem;
+    color: $color-bg;
+}
+
+.textRIcetta {
+    margin: 1.5rem;
+    font-family: $font-text;
+    color: $color-text;
+}
+
+.imageRicetta {
+    box-shadow: $shadow-medium;
+    border-radius: $radius-small;
+    border: 1.5px solid $color-border;
+}

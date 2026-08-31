@@ -12,8 +12,9 @@ async function richiestaRicetteAPI() {
     const nomeRicetta = ricetta.strMeal; //nome ricetta
     const linkRicetta = ricetta.strYoutube //link video
     const istruzRicetta = ricetta.strInstructions; //istruzioni
+    const imgUrl = ricetta.strMealThumb;
 
-    return {nomeRicetta, linkRicetta, istruzRicetta}
+    return {nomeRicetta, linkRicetta, istruzRicetta, imgUrl}
 }
 
 //export funzione

@@ -3,7 +3,6 @@ import TimerRespiro from "../components/TimerRespiro"
 import styleResp from "./respiro.module.scss"
 import imageRespiro from "../assets/image-respiro.png"
 import Footer from "../components/Footer"
-import RicetteAPI from "../components/RicetteAPI"
 
 
 
