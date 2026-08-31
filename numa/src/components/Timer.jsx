@@ -4,7 +4,6 @@ import { aggiungi_secondi, pausa, start, reset, tick } from "../slice/timerSlice
 import { useEffect, useRef } from "react";
 import {useGSAP} from "@gsap/react"
 import gsap from "gsap";
-import imageMeditazione from "../assets/image-meditazione.png"
 
 gsap.registerPlugin(useGSAP)
 

@@ -1,0 +1,28 @@
+// import delle variabilie
+@use "../style/abstract/variables" as *;
+
+// **** stile pagina respiro
+
+//container principale
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 24px 16px 0 16px;
+    background-color: $color-primary-soft;
+    height: 100%;
+}
+
+.title {
+    font-size: $font-size-title;
+    font-family: $font-title;
+    color: $color-text;
+    margin-top: 0.5rem;
+    color: $color-text;
+}
+
+.text {
+    font-family: $font-text;
+    color: $color-text;
+}
+
+.info {}
