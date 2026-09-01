@@ -9,17 +9,17 @@ gsap.registerPlugin(useGSAP)
 
 //Componente
 export default function Timer(){
-//seleziona lo store del timer
-const {seconds, isRunning} = useSelector((state)=>state.timer)
+
+const {seconds, isRunning} = useSelector((state)=>state.timer) //seleziona lo store del timer
 const dispatch = useDispatch()
 
 //riferimenti agli elementi da animare
 const counterBoxRef = useRef(null)
 
 //conversione da secondi a minuti per la visualizzazione
-const mm = String(Math.floor(seconds / 60)).padStart(2, "0")
-const ss = String(seconds % 60).padStart(2, "0")
-const minuti = `${mm}:${ss}`
+const mm = String(Math.floor(seconds / 60)).padStart(2, "0") //minuti
+const ss = String(seconds % 60).padStart(2, "0") // seecondi
+const minuti = `${mm}:${ss}` //stringa toto minuti + seconfi
 
 //avvio del timer con setIntervall
 useEffect(()=>{
@@ -66,6 +66,7 @@ useGSAP(() => {
                 <button className={style.timer__tempi} onClick={()=>dispatch(aggiungi_secondi(600))}>10<span>min</span></button>
                 <button className={style.timer__tempi} onClick={()=>dispatch(aggiungi_secondi(900))}>15<span>min</span></button>
                 <button className={style.timer__tempi} onClick={()=>dispatch(aggiungi_secondi(1200))}>20<span>min</span></button>
+                <button className={style.timer__tempi} onClick={()=>dispatch(aggiungi_secondi(1800))}>30<span>min</span></button>
             </div>
             <div className={style.counterBox} ref={counterBoxRef}>
                 <p className={style.minuti}>{minuti}</p>

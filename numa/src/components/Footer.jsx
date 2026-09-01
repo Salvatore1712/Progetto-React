@@ -1,8 +1,8 @@
-import style from "./footer.module.scss"
-import logoSalvatore from "../assets/logo-SDR-black.png"
+import style from "./footer.module.scss" //modulo stile
+import logoSalvatore from "../assets/logo-SDR-black.png" //logo SDR
 import { Link } from "react-router"
 
-
+// *** COMPONENTE FOOTER
 export default function Footer(){
     return(
     <>

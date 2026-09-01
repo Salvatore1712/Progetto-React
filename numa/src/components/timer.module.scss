@@ -1,27 +1,26 @@
-// **** stile componente Timer
 //import variabili
 @use "../style/abstract/variables" as *;
 
+// **** STILE COMPONENTE TIMER
 .timer {
-    margin: 0.8rem auto 1rem auto;
-    width: 90%;
+    margin: 0 auto 1rem auto;
+    width: 100%;
     border-radius: $radius-small;
     display: flex;
-    flex-grow: 1;
     align-items: center;
     flex-wrap: wrap;
-    padding: 0 24px;
-    gap: 8px;
+    padding: 0;
+    gap: 10px;
     justify-content: center;
 
     &__tempi {
         margin: 0;
         padding: 0;
-        width: 110px;
-        height: 70px;
+        flex: 1 1 58px;
+        max-width: 96px;
+        height: 66px;
         border-radius: $radius-small;
         background-color: $color-surface-card;
-        border: $color-border;
         box-shadow: $shadow-medium;
         border: 1px solid $color-border;
         font-size: 25px;
@@ -32,6 +31,8 @@
         align-items: center;
         justify-content: center;
         color: $color-text;
+        cursor: pointer;
+        transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
 
         span {
             font-size: 18px;
@@ -40,18 +41,35 @@
             margin: -10px;
             color: $color-text;
         }
+
+        &:hover {
+            transform: translateY(-2px);
+            border-color: $color-primary;
+        }
+
+        &:active {
+            transform: translateY(0);
+            border-color: $color-primary;
+            box-shadow: inset 0 0 0 2px $color-primary;
+        }
+
+        &:focus-visible {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+        }
     }
 }
 
-//stile timer minuti
+// STILE MINUTI DEL TIMER
 .counterBox {
     position: relative;
-    z-index: 0; // stacking context esplicito e basso: resta sotto l'header/menu
-    margin: 1.8rem auto;
-    width: 80%;
-    height: 100px;
+    z-index: 0;
+    margin: 1.5rem auto;
+    width: 100%;
+    max-width: 320px;
+    height: 110px;
     border-radius: $radius-xl;
-    background-color: $color-primary-soft;
+    background-color: $color-surface-card;
     box-shadow: $shadow-medium;
     will-change: transform;
     display: flex;
@@ -69,15 +87,18 @@
 
 //bottoni action
 .buttonBox {
-    width: 85%;
+    width: 100%;
+    max-width: 360px;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     margin: 0 auto;
-    gap: 8px;
+    gap: 10px;
     justify-content: center;
 
     &__btn {
-        width: 30%;
+        flex: 1;
+        min-height: 52px;
+        padding: 0 12px;
         background-color: $color-primary;
         border: none;
         border-radius: $radius-medium;
@@ -85,9 +106,24 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        font-size: $font-size-h2;
+        font-size: $font-size-h3;
         font-family: $font-text;
         color: $color-bg;
+        cursor: pointer;
+        transition: filter 0.2s ease, transform 0.15s ease;
+
+        &:hover {
+            filter: brightness(0.9);
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
+
+        &:focus-visible {
+            outline: 2px solid $color-primary;
+            outline-offset: 2px;
+        }
     }
 }
 

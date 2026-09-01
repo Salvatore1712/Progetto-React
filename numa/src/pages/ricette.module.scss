@@ -1,31 +1,47 @@
-//stile pagina ricetta
+// **** stile pagina ricette
 
 @use "../style/abstract/variables" as *;
 
 .container {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
-    padding: 24px 16px 0 16px;
-    background-color: #FAFBF7;
-    align-items: flex-start;
+    align-items: center;
+    padding: 2rem 1rem 0;
+    background-color: $color-primary-soft;
+    min-height: 100%;
+}
+
+// wrapper centrato: colonna singola e focalizzata (come Meditazione / Respiro)
+.content {
+    width: 100%;
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.titleWrap {
+    width: 100%;
 }
 
 .title {
-    font-size: $font-size-title;
+    font-size: clamp(2.75rem, 8vw + 1rem, #{$font-size-title});
     font-family: $font-title;
     color: $color-text;
-    margin-top: 0.5rem;
-    color: $color-text;
+    line-height: 1.05;
 
-
-    &__small {}
+    &__small {
+        margin-top: 0.5rem;
+        font-family: $font-title;
+        font-size: $font-size-h3;
+        color: $color-text;
+    }
 }
 
 .text {
+    margin-top: 0.5rem;
     font-family: $font-text;
-    color: $color-text;
+    color: $color-text-muted;
     font-size: $font-size-standard;
-    padding: 0rem 16px;
-    margin: 0 auto;
+    line-height: 1.6;
 }

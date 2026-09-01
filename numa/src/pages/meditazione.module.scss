@@ -5,39 +5,87 @@
 
 .container {
     display: flex;
-    flex-wrap: wrap;
-    padding: 24px 16px 0 16px;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1rem 0;
     background-color: $color-primary-soft;
-    height: 100%;
+    min-height: 100%;
+}
+
+// wrapper centrato: colonna singola e focalizzata
+.content {
+    width: 100%;
+    max-width: 680px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.titleWrap {
+    width: 100%;
 }
 
 .title {
-    font-size: $font-size-title;
+    font-size: clamp(2.75rem, 8vw + 1rem, #{$font-size-title});
     font-family: $font-title;
     color: $color-text;
-    margin-top: 0.5rem;
-    color: $color-text;
+    line-height: 1.05;
 }
 
 .text {
     font-family: $font-text;
-    color: $color-text;
+    color: $color-text-muted;
+    font-size: $font-size-standard;
+    line-height: 1.6;
+    margin-top: 0.5rem;
 }
 
-img {
-    margin: 2rem auto;
-    width: 80%;
+// pannello che contiene il timer, coerente con le card della home
+.panel {
+    position: relative;
+    background: linear-gradient(155deg, $color-surface-card 0%, $color-primary-soft 100%);
+    border: 1px solid $color-border;
+    border-radius: $radius-large;
+    box-shadow: $shadow-medium;
+    padding: 1.75rem 1.25rem;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0 0 auto 0;
+        height: 4px;
+        border-radius: $radius-large $radius-large 0 0;
+        background: linear-gradient(90deg, $color-primary, $color-success);
+    }
 }
 
-h2 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+.image {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto;
+}
+
+// sezione riflessiva finale in stile card
+.reflection {
+    background: linear-gradient(155deg, $color-surface-card 0%, $color-primary-soft 100%);
+    border: 1px solid $color-border;
+    border-radius: $radius-large;
+    box-shadow: $shadow-medium;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.subtitle {
+    margin: 0;
     font-family: $font-title;
     font-size: $font-size-h2;
-}
-
-.text {
-    margin: 0 auto 2rem auto;
-    font-family: $font-text;
-    width: 85%;
+    color: $color-text;
 }
